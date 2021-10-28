@@ -1,0 +1,31 @@
+<mat-toolbar color="accent" >
+  <mat-toolbar-row>
+    <mat-divider [vertical]="true"></mat-divider>
+    <mat-label> Event</mat-label>
+    <div class="flex-stretch"></div>
+    <mat-divider [vertical]="true"></mat-divider>
+    <button (click)="back()" mat-button mat-stroked-button>Back</button>
+    <mat-divider [vertical]="true"></mat-divider>
+    <button (click)="save()" mat-button mat-stroked-button>Save</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<form fxLayout="column" [formGroup]="form">
+      <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+        <mat-form-field color="warn"  appearance="outline">
+          <mat-label>Date</mat-label>
+          <input matInput name="date" formControlName="date" placeholder="Date"/>
+        </mat-form-field>
+      </div>
+      <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+        <mat-form-field color="warn"  appearance="outline">
+          <mat-label>Description</mat-label>
+          <input matInput name="description" formControlName="description" placeholder="Description"/>
+        </mat-form-field>
+      </div>
+      <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+        <mat-form-field color="warn"  appearance="outline">
+          <mat-label>Lang</mat-label>
+          <input matInput name="lang" formControlName="lang" placeholder="Lang"/>
+        </mat-form-field>
+      </div>
+</form>
